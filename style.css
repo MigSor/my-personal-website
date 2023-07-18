@@ -1,12 +1,89 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
 #main {
-  background-color: dodgerblue;
-  height: 100vh;
+  height: 3000px;
   width: 100vw;
   position: relative;
+}
+
+.header {
+  width: 100vw;
+  height: 80px;
+  background: linear-gradient(to right, dodgerblue, crimson);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+}
+
+.header p {
+  color: white;
+  letter-spacing: 3px;
+  font-size: 1.4rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  letter-spacing: 3px;
+  margin: 0 10px;
+}
+
+.top-hero {
+  height: 650px;
+  background: linear-gradient(to right, dodgerblue, crimson);
+}
+
+.contact img {
+  width: 100%;
+}
+.contact {
+  width: 70%;
+  /* height: 500px; */
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  top: 25%;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+.contact-left {
+  flex: 50%;
+}
+
+.contact-left img {
+  border-radius: 8px;
+}
+
+.contact-right {
+  flex: 50%;
+  padding: 30px;
+}
+
+.bot-hero {
+  background-color: #e6e3e3;
+  width: 100vw;
+  height: 850px;
+  text-align: center;
+}
+
+.introduction {
+  position: relative;
+  top: 340px;
 }
