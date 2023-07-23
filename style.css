@@ -142,7 +142,7 @@ body {
 
 .about {
   position: relative;
-  min-height: 800px;
+  height: 1000px;
   /* background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
@@ -154,7 +154,7 @@ body {
 
 .about::before {
   content: " ";
-  background-image: url("./images/pokemonImg.png");
+  background-image: url("./images/anime.jpg");
   width: 100vw;
   height: 700px;
   position: absolute;
@@ -167,14 +167,28 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 1000px;
 }
 
 .about-inner {
-  width: 80%;
-  height: 50%;
+  width: 95%;
+  height: 480px;
+  display: flex;
 
   margin: 0 auto;
   position: relative;
+  top: 0;
+  background-color: white;
+}
+
+.inner-left {
+  flex: 30%;
+  padding: 20px;
+}
+.inner-right {
+  flex: 70%;
+  padding: 20px;
+  overflow: scroll;
 }
 
 #searchResult {
@@ -183,6 +197,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  overflow-x: scroll;
 }
 
 #searchResult li {
@@ -191,7 +206,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 300px;
+  width: 150px;
   font-size: 16px;
 }
 

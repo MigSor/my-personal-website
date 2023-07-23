@@ -4,10 +4,14 @@ let nav = document.querySelector(".nav");
 let menu = document.querySelector(".menu");
 let searchResult = document.querySelector("#searchResult");
 
-async function fetchAnime(pokemonName = "Pokemon") {
-  await fetch(`https://api.jikan.moe/v4/anime?q=${pokemonName}`)
+function fetchAnime(pokemonName = "Pokemon") {
+  let imgLoading = document.createElement("img");
+  imgLoading.src = "./images/loading.gif";
+  searchResult.append(imgLoading);
+  fetch(`https://api.jikan.moe/v4/anime?q=${pokemonName}`)
     .then((response) => response.json())
     .then((results) => {
+      searchResult.removeChild(imgLoading);
       // console.log(results.data);
       let animeList = results.data;
 
@@ -15,7 +19,9 @@ async function fetchAnime(pokemonName = "Pokemon") {
         let li = document.createElement("li");
         let img = document.createElement("img");
         let a = document.createElement("a");
-        console.log(item.url);
+        a.href = item.url;
+        a.alt = item.title;
+        // console.log(item.url);
         img.src = item.images.jpg.image_url;
         li.textContent = item.title;
         li.append(img);
