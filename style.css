@@ -30,6 +30,21 @@ body {
   z-index: 1;
 }
 
+.invi {
+  display: none;
+}
+.menu {
+  transition: all 0.2s;
+}
+.menu span {
+  color: white;
+}
+
+.menu:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 .header p {
   color: white;
   letter-spacing: 3px;
@@ -41,6 +56,18 @@ body {
   color: whitesmoke;
   letter-spacing: 3px;
   margin: 0 10px;
+}
+
+.nav-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  background-color: grey;
+  border-radius: 8px;
 }
 
 .top-hero {
@@ -107,13 +134,73 @@ body {
 }
 
 .bot-hero {
-  background-color: #e6e3e3;
   width: 100vw;
-  height: 850px;
+  /* height: 850px; */
   text-align: center;
+  height: 340px;
 }
 
-.introduction {
+.about {
   position: relative;
-  top: 340px;
+  min-height: 800px;
+  /* background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about::before {
+  content: " ";
+  background-image: url("./images/pokemonImg.png");
+  width: 100vw;
+  height: 700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.25;
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-inner {
+  width: 80%;
+  height: 50%;
+
+  margin: 0 auto;
+  position: relative;
+}
+
+#searchResult {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#searchResult li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+  font-size: 16px;
+}
+
+#searchResult li img {
+  width: 150px;
+}
+
+@media only screen and (max-width: 800px) {
+  .contact {
+    flex-wrap: wrap;
+  }
 }

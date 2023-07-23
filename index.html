@@ -21,6 +21,9 @@
           <a href="#">PROJECTS</a>
           <a href="#">SEND ME A MESSAGE</a>
         </nav>
+        <div class="menu invi">
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
       </header>
       <div class="hero">
         <div class="top-hero">
@@ -59,11 +62,17 @@
             </div>
           </div>
         </div>
-        <div class="bot-hero">
-          <div class="introduction">
+        <div class="bot-hero"></div>
+        <section class="about">
+          <div class="about-inner">
             <h2>About myself</h2>
+            <form id="animeForm">
+              <input type="text" id="animeInput" />
+              <button type="submit" id="searchBtn">Search</button>
+            </form>
+            <ul id="searchResult"></ul>
           </div>
-        </div>
+        </section>
       </div>
     </main>
     <script src="script.js"></script>
