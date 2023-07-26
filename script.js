@@ -51,4 +51,5 @@ window.addEventListener("resize", function (event) {
 
 menu.addEventListener("click", () => {
   nav.classList.toggle("nav-small");
+  console.log(menu.classList.contains("invi"));
 });
