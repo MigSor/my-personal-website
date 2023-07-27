@@ -56,8 +56,10 @@ menu.addEventListener("click", () => {
   console.log(menu.classList.contains("invi"));
 });
 
+// Dark mode???
 darkBtn.addEventListener("click", () => {
   mainCtn.classList.toggle("dark");
+  mainCtn.classList.toggle("light");
   if (darkBtn.textContent === "DARK") {
     darkBtn.textContent = "LIGHT";
     darkBtn.style.backgroundColor = "black";
