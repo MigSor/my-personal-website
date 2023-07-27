@@ -3,6 +3,8 @@ let animeInput = document.getElementById("animeInput");
 let nav = document.querySelector(".nav");
 let menu = document.querySelector(".menu");
 let searchResult = document.querySelector("#searchResult");
+let mainCtn = document.querySelector("#main");
+let darkBtn = document.querySelector("#dark-btn");
 
 function fetchAnime(pokemonName = "Pokemon") {
   let imgLoading = document.createElement("img");
@@ -52,4 +54,17 @@ window.addEventListener("resize", function (event) {
 menu.addEventListener("click", () => {
   nav.classList.toggle("nav-small");
   console.log(menu.classList.contains("invi"));
+});
+
+darkBtn.addEventListener("click", () => {
+  mainCtn.classList.toggle("dark");
+  if (darkBtn.textContent === "DARK") {
+    darkBtn.textContent = "LIGHT";
+    darkBtn.style.backgroundColor = "black";
+    darkBtn.style.color = "white";
+  } else {
+    darkBtn.textContent = "DARK";
+    darkBtn.style.backgroundColor = "white";
+    darkBtn.style.color = "black";
+  }
 });

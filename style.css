@@ -59,6 +59,19 @@ body {
   transition: all 0.5s;
 }
 
+#dark-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: white;
+  font-weight: 700;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
 .nav a:hover {
   transform: scale(1.1);
   background-color: #f8f8f8;
