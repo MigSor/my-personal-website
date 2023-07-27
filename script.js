@@ -1,10 +1,11 @@
-let animeForm = document.getElementById("animeForm");
-let animeInput = document.getElementById("animeInput");
-let nav = document.querySelector(".nav");
-let menu = document.querySelector(".menu");
-let searchResult = document.querySelector("#searchResult");
-let mainCtn = document.querySelector("#main");
-let darkBtn = document.querySelector("#dark-btn");
+const animeForm = document.getElementById("animeForm");
+const animeInput = document.getElementById("animeInput");
+const nav = document.querySelector(".nav");
+const menu = document.querySelector(".menu");
+const searchResult = document.querySelector("#searchResult");
+const mainCtn = document.querySelector("#main");
+const darkBtn = document.querySelector("#dark-btn");
+const contactCard = document.querySelector(".contact");
 
 function fetchAnime(pokemonName = "Pokemon") {
   let imgLoading = document.createElement("img");
@@ -64,6 +65,7 @@ darkBtn.addEventListener("click", () => {
     darkBtn.textContent = "LIGHT";
     darkBtn.style.backgroundColor = "black";
     darkBtn.style.color = "white";
+    contactCard.style.color = "black ";
   } else {
     darkBtn.textContent = "DARK";
     darkBtn.style.backgroundColor = "white";
