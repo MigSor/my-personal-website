@@ -63,17 +63,26 @@ body {
   padding: 8px 16px;
   border-radius: 8px;
   border: none;
-  background-color: white;
   font-weight: 700;
 }
 
 .dark {
   background-color: black;
-  color: white;
   transition: all 1s;
 }
 
 .light {
+  background-color: white;
+  transition: all 1s;
+}
+
+.dark-btn {
+  background-color: black;
+  color: white;
+  transition: all 1s;
+}
+
+.light-btn {
   background-color: white;
   color: black;
   transition: all 1s;

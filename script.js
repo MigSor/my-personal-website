@@ -63,12 +63,11 @@ darkBtn.addEventListener("click", () => {
   mainCtn.classList.toggle("light");
   if (darkBtn.textContent === "DARK") {
     darkBtn.textContent = "LIGHT";
-    darkBtn.style.backgroundColor = "black";
-    darkBtn.style.color = "white";
-    contactCard.style.color = "black ";
+    darkBtn.classList.toggle("dark-btn");
+    darkBtn.classList.toggle("light-btn");
   } else {
     darkBtn.textContent = "DARK";
-    darkBtn.style.backgroundColor = "white";
-    darkBtn.style.color = "black";
+    darkBtn.classList.toggle("dark-btn");
+    darkBtn.classList.toggle("light-btn");
   }
 });
