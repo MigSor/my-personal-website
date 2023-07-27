@@ -9,7 +9,8 @@ const contactCard = document.querySelector(".contact");
 
 function fetchAnime(pokemonName = "Pokemon") {
   let imgLoading = document.createElement("img");
-  imgLoading.src = "./images/loading.gif";
+  imgLoading.style.width = "300px";
+  imgLoading.src = "./images/whiteLoading.gif";
   searchResult.append(imgLoading);
   fetch(`https://api.jikan.moe/v4/anime?q=${pokemonName}`)
     .then((response) => response.json())
