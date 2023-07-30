@@ -8,6 +8,9 @@ const darkBtn = document.querySelector("#dark-btn");
 const contactCard = document.querySelector(".contact");
 
 function fetchAnime(pokemonName = "Pokemon") {
+  //clear previous results
+  searchResult.innerHTML = "";
+  //normal flow
   let imgLoading = document.createElement("img");
   imgLoading.style.width = "300px";
   imgLoading.src = "./images/whiteLoading.gif";
