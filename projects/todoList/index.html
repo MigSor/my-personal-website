@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="todo-app">
+      <section class="todo-inner">
+        <h1>Simple Todo App</h1>
+        <section class="add-todo">
+          <form onsubmit="addItem(event)">
+            <input type="text" id="todo-input" />
+            <button id="todo-btn">Add Todo</button>
+          </form>
+        </section>
+        <section id="show-todo">
+          <ul id="todo-list">
+            <!-- <li class="todo-item">
+              <span class="todo-name" onclick="completed(event)">item 1</span>
+              <button onclick="removeTodo(event)">X</button>
+            </li> -->
+          </ul>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
