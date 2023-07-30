@@ -25,10 +25,13 @@ function fetchAnime(pokemonName = "Pokemon") {
         let a = document.createElement("a");
         a.href = item.url;
         a.alt = item.title;
+        a.target = "_blank";
         // console.log(item.url);
         img.src = item.images.jpg.image_url;
+        img.alt = item.title;
         li.textContent = item.title;
-        li.append(img);
+        a.append(img);
+        li.append(a);
         searchResult.append(li);
         // console.log(item.title);
         // console.log(item.images.jpg.image_url);

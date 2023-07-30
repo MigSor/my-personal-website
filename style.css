@@ -187,7 +187,7 @@ body {
 
 .about {
   position: relative;
-  height: 1000px;
+  height: 700px;
   /* background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
@@ -201,7 +201,6 @@ body {
   content: " ";
   background-image: url("./images/anime.jpg");
   width: 100vw;
-  height: 700px;
   position: absolute;
   top: 0;
   left: 0;
@@ -212,7 +211,7 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 1000px;
+  height: 700px;
 }
 
 .about-inner {

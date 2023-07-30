@@ -23,7 +23,6 @@
 
 .todo-app::before {
   content: " ";
-
   background-image: url("./images/notes.jpg");
   position: absolute;
   top: 0;
