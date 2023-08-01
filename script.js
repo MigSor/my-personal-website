@@ -2,6 +2,7 @@ const animeForm = document.getElementById("animeForm");
 const animeInput = document.getElementById("animeInput");
 const nav = document.querySelector(".nav");
 const menu = document.querySelector(".menu");
+const smallMenu = document.querySelector(".nav-small-menu");
 const searchResult = document.querySelector("#searchResult");
 const mainCtn = document.querySelector("#main");
 const darkBtn = document.querySelector("#dark-btn");
@@ -48,33 +49,17 @@ animeForm.addEventListener("submit", (event) => {
   animeInput.value = "";
 });
 
-window.addEventListener("resize", function (event) {
-  let newWidth = window.innerWidth;
-  if (newWidth <= 900) {
-    nav.classList.add("invi");
-    menu.classList.remove("invi");
-  } else {
-    nav.classList.remove("invi");
-    menu.classList.add("invi");
-  }
-});
+// window.addEventListener("resize", function (event) {
+//   let newWidth = window.innerWidth;
+//   if (newWidth <= 800) {
+//     nav.classList.add("invi");
+//     menu.classList.remove("invi");
+//   } else {
+//     nav.classList.remove("invi");
+//     menu.classList.add("invi");
+//   }
+// });
 
 menu.addEventListener("click", () => {
-  nav.classList.toggle("nav-small");
-  console.log(menu.classList.contains("invi"));
-});
-
-// Dark mode???
-darkBtn.addEventListener("click", () => {
-  mainCtn.classList.toggle("dark");
-  mainCtn.classList.toggle("light");
-  if (darkBtn.textContent === "DARK") {
-    darkBtn.textContent = "LIGHT";
-    darkBtn.classList.toggle("dark-btn");
-    darkBtn.classList.toggle("light-btn");
-  } else {
-    darkBtn.textContent = "DARK";
-    darkBtn.classList.toggle("dark-btn");
-    darkBtn.classList.toggle("light-btn");
-  }
+  smallMenu.classList.toggle("invi");
 });

@@ -20,9 +20,15 @@
           <a href="#">EDUCATION</a>
           <a href="#">PROJECTS</a>
           <a href="#">SEND ME A MESSAGE</a>
-          <button id="dark-btn" class="light-btn">DARK</button>
         </nav>
-        <div class="menu invi">
+
+        <nav class="nav-small-menu invi">
+          <a href="#">HOBBIES</a>
+          <a href="#">PROJECTS</a>
+          <a href="#">EXPERIENCE</a>
+          <a href="#">EDUCATION</a>
+        </nav>
+        <div class="menu">
           <span class="material-symbols-outlined"> menu </span>
         </div>
       </header>
@@ -33,7 +39,7 @@
               <img src="./images/miguelPic.jpeg" alt="Miguel" title="Miguel" />
             </div>
             <div class="contact-right">
-              <p>HELLO EVERYBODY, I AM</p>
+              <p>HELLO, I AM</p>
               <h1>Miguel Soriano</h1>
               <p>JUNIOR DEVELOPER</p>
               <p class="self-intro">
@@ -69,7 +75,20 @@
       <section class="about">
         <div class="about-inner">
           <div class="inner-left">
-            <h2>About myself</h2>
+            <h2>Hobbies</h2>
+            <p class="hobbies-intro">
+              Hello! My favorite pastime is watching anime and reading manga. If
+              you have any recommendations, feel free to share them with me! I'm
+              always excited to discover new and exciting anime or manga titles.
+            </p>
+            <ul class="top-anime">
+              <li onclick="fetchAnime('Tensei shitara Slime Datta Ken')">
+                Tensei shitara Slime Datta Ken
+              </li>
+              <li onclick="fetchAnime('Hunter x Hunter')">Hunter X Hunter</li>
+              <li onclick="fetchAnime('Hunter x Hunter')">Yuu Yuu Hakusho</li>
+              <li onclick="fetchAnime('Slam Dunk')">Slam Dunk</li>
+            </ul>
           </div>
           <div class="inner-right">
             <h2>Search for anime</h2>
