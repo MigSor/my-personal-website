@@ -40,7 +40,7 @@
             <div class="contact-right">
               <p>HELLO, I AM</p>
               <h1>Miguel Soriano</h1>
-              <p>JUNIOR DEVELOPER</p>
+
               <p class="self-intro">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
                 quidem modi nisi cupiditate aperiam incidunt consequatur
@@ -54,8 +54,18 @@
                 </div>
               </div>
               <div class="social">
-                <img src="./images/iconGithub.png" alt="link to Github" />
-                <img src="./images/iconLinkedin.png" alt="link to Linkedin" />
+                <a
+                  href="https://www.linkedin.com/in/miguel-rausa-soriano"
+                  target="_blank"
+                >
+                  <img src="./images/iconGithub.png" alt="link to Github" />
+                </a>
+                <a
+                  href="https://github.com/MigSor/my-personal-website"
+                  target="_blank"
+                >
+                  <img src="./images/iconLinkedin.png" alt="link to Linkedin" />
+                </a>
               </div>
             </div>
           </div>
@@ -95,24 +105,13 @@
       <section class="projects-main">
         <h2>Projects</h2>
         <div class="projects-inner">
-          <button id="prevBtn">Prev</button>
-          <ul id="projects-list">
-            <!-- <li class="project-item">
-              <div class="left">
-                <a href="./projects/todoList/index.html">
-                  <img src="./images/todo.png" alt="todo app" />
-                  <p>Simple To do App</p>
-                </a>
-              </div>
-              <div class="right">
-                <h3>Description</h3>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Blanditiis eos ab facere in magni aut voluptates suscipit ex nam
-                quibusdam.
-              </div>
-            </li> -->
-          </ul>
-          <button id="nextBtn">Next</button>
+          <button id="prevBtn">
+            <span class="material-symbols-outlined"> arrow_back </span>
+          </button>
+          <ul id="projects-list"></ul>
+          <button id="nextBtn">
+            <span class="material-symbols-outlined"> arrow_forward </span>
+          </button>
         </div>
       </section>
     </main>

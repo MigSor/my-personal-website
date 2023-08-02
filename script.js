@@ -60,7 +60,7 @@ const projects = [
   {
     projectTitle: "project 1",
     projectHref: "./projects/todoList/index.html",
-    projectImg: "./images/whiteLoading.gif",
+    projectImg: "./images/todo.png",
     projectDesc:
       " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, eligendi!",
   },
@@ -87,14 +87,14 @@ const projects = [
   },
 ];
 let index = 0;
-let html = projectsList.insertAdjacentHTML(
+projectsList.insertAdjacentHTML(
   "afterbegin",
   `
   <li class="project-item">
   <div class="left">
     <a href=${projects[index].projectHref}>
       <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
-      <p>${projects[index].projectTitle}</p>
+ 
     </a>
   </div>
   <div class="right">
@@ -116,7 +116,7 @@ nextBtn.addEventListener("click", function () {
       <div class="left">
         <a href=${projects[index].projectHref}>
           <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
-          <p>${projects[index].projectTitle}</p>
+
         </a>
       </div>
       <div class="right">
@@ -142,7 +142,7 @@ prevBtn.addEventListener("click", function () {
       <div class="left">
         <a href=${projects[index].projectHref}>
           <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
-          <p>${projects[index].projectTitle}</p>
+     
         </a>
       </div>
       <div class="right">
