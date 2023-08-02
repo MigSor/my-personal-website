@@ -49,17 +49,6 @@ animeForm.addEventListener("submit", (event) => {
   animeInput.value = "";
 });
 
-// window.addEventListener("resize", function (event) {
-//   let newWidth = window.innerWidth;
-//   if (newWidth <= 800) {
-//     nav.classList.add("invi");
-//     menu.classList.remove("invi");
-//   } else {
-//     nav.classList.remove("invi");
-//     menu.classList.add("invi");
-//   }
-// });
-
 menu.addEventListener("click", () => {
   smallMenu.classList.toggle("invi");
 });
