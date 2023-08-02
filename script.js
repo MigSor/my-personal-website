@@ -61,49 +61,69 @@ const projects = [
     projectTitle: "project 1",
     projectHref: "./projects/todoList/index.html",
     projectImg: "./images/whiteLoading.gif",
+    projectDesc:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, eligendi!",
   },
   {
     projectTitle: "project 2",
     projectHref: "./projects/todoList/index.html",
     projectImg: "./images/whiteLoading.gif",
+    projectDesc:
+      "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,provident sequi odio molestias ex dignissimos!",
   },
   {
     projectTitle: "project 3",
     projectHref: "./projects/todoList/index.html",
     projectImg: "./images/whiteLoading.gif",
+    projectDesc:
+      "           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nesciunt provident sit sint nemo inventore vero debitis dolorem unde ipsa! ",
   },
   {
     projectTitle: "project 4",
     projectHref: "./projects/todoList/index.html",
     projectImg: "./images/whiteLoading.gif",
+    projectDesc:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, eligendi!",
   },
 ];
 let index = 0;
-projectsList.insertAdjacentHTML(
+let html = projectsList.insertAdjacentHTML(
   "afterbegin",
   `
-<li class="project-item">
-<a href=${projects[index].projectHref}>
-  <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
-  <p>${projects[index].projectTitle}</p>
-</a>
+  <li class="project-item">
+  <div class="left">
+    <a href=${projects[index].projectHref}>
+      <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
+      <p>${projects[index].projectTitle}</p>
+    </a>
+  </div>
+  <div class="right">
+    <h3>Description</h3>
+    ${projects[index].projectDesc}
+  </div>
 </li>`
 );
 
 nextBtn.addEventListener("click", function () {
-  if (index <= projects.length && index !== projects.length) {
+  if (index < projects.length - 1) {
     index++;
     console.log("increment", index);
     projectsList.innerHTML = "";
     projectsList.insertAdjacentHTML(
       "afterbegin",
       `
-  <li class="project-item">
-    <a href=${projects[index].projectHref}>
-      <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
-      <p>${projects[index].projectTitle}</p>
-    </a>
-  </li>`
+      <li class="project-item">
+      <div class="left">
+        <a href=${projects[index].projectHref}>
+          <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
+          <p>${projects[index].projectTitle}</p>
+        </a>
+      </div>
+      <div class="right">
+        <h3>Description</h3>
+        ${projects[index].projectDesc}
+      </div>
+    </li>`
     );
   }
 });
@@ -118,12 +138,18 @@ prevBtn.addEventListener("click", function () {
     projectsList.insertAdjacentHTML(
       "afterbegin",
       `
-  <li class="project-item">
-    <a href=${projects[index].projectHref}>
-      <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
-      <p>${projects[index].projectTitle}</p>
-    </a>
-  </li>`
+      <li class="project-item">
+      <div class="left">
+        <a href=${projects[index].projectHref}>
+          <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
+          <p>${projects[index].projectTitle}</p>
+        </a>
+      </div>
+      <div class="right">
+        <h3>Description</h3>
+        ${projects[index].projectDesc}
+      </div>
+    </li>`
     );
   }
 });

@@ -124,7 +124,7 @@ body {
 
 .top-hero {
   height: 52rem;
-  background: dodgerblue url("./images/elnido.jpg");
+  background: url("./images/elnido.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 25% 50%;
@@ -294,7 +294,7 @@ body {
 }
 
 .projects-main {
-  padding: 20px;
+  padding: 50px 20px 20px;
   text-align: center;
 }
 
@@ -307,22 +307,6 @@ body {
   height: 300px;
 }
 
-.project-item {
-  border-radius: 8px;
-  background-color: #f8f8f8;
-  padding: 10px;
-  display: flex;
-}
-
-#projects-list li a {
-  text-decoration: none;
-  color: black;
-  font-size: 1vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 30px;
-}
 #projects-list {
   padding: 50px;
   list-style: none;
@@ -364,10 +348,33 @@ body {
 .top-anime li:hover {
   transform: scale(1.1);
 }
+
+.project-item {
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+}
+
+.left a {
+  color: black;
+  text-decoration: none;
+}
+
+.project-item div.left {
+  flex: 50%;
+}
+
+.project-item div.right {
+  flex: 50%;
+}
 @media only screen and (max-width: 800px) {
   .contact {
     flex-wrap: wrap;
     width: 53%;
+  }
+
+  .project-item {
+    flex-wrap: wrap;
   }
 
   .contact-left {
