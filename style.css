@@ -25,13 +25,12 @@ body {
 .header {
   width: 100vw;
   height: 80px;
-  background-color: dodgerblue;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  position: fixed;
+  /* position: fixed; */
   z-index: 1;
 }
 
@@ -47,16 +46,12 @@ body {
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-.header p {
-  color: white;
-  letter-spacing: 3px;
-  font-size: 1.4rem;
-}
-
 .nav a {
   text-decoration: none;
   color: whitesmoke;
-  letter-spacing: 3px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 4.5px;
   margin: 0 10px;
   transition: all 0.5s;
 }
@@ -129,32 +124,32 @@ body {
 
 .top-hero {
   height: 52rem;
-  background: dodgerblue url("./images/pom.jpg");
+  background: dodgerblue url("./images/elnido.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 100% 20%;
-  /* https://css-generators.com/wavy-shapes/ */
+  background-position: 25% 50%;
+  /* https://css-generators.com/wavy-shapes/
   --mask: radial-gradient(6.71em at 50% calc(100% - 9em), #000 99%, #0000 101%)
       calc(50% - 6em) 0/12em 100%,
     radial-gradient(6.71em at 50% calc(100% + 6em), #0000 99%, #000 101%) 50%
       calc(100% - 3em) / 12em 100% repeat-x;
   -webkit-mask: var(--mask);
-  mask: var(--mask);
+  mask: var(--mask); */
 }
 
 .contact img {
   width: 100%;
 }
 .contact {
-  width: 53%;
+  width: 40%;
   /* height: 500px; */
   display: flex;
   gap: 20px;
   margin: 0 auto;
   padding: 20px;
   position: relative;
-  top: 15%;
-  right: 15%;
+  top: 10%;
+  right: 25%;
   border-radius: 50px;
   background-color: #f8f8f8;
   z-index: 999999;
@@ -177,7 +172,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
 }
 
 .self-intro {
@@ -188,11 +182,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 20px;
 }
 
 .social {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .social img {
@@ -309,7 +302,7 @@ body {
   font-size: 30px;
 }
 
-#projects-list li img {
+.project-item img {
   width: 300px;
   height: 300px;
 }
@@ -331,10 +324,16 @@ body {
   gap: 30px;
 }
 #projects-list {
-  display: flex;
   padding: 50px;
   list-style: none;
 }
+
+.projects-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .invi {
   display: none;
 }
@@ -359,7 +358,7 @@ body {
   background-color: #f8f8f8;
   padding: 5px;
   border-radius: 8px;
-  box-shadow: 2px 0.5px 2px dodgerblue;
+  box-shadow: 2px 0.5px 2px lightgrey;
 }
 
 .top-anime li:hover {
@@ -368,6 +367,7 @@ body {
 @media only screen and (max-width: 800px) {
   .contact {
     flex-wrap: wrap;
+    width: 53%;
   }
 
   .contact-left {

@@ -13,26 +13,26 @@
   </head>
   <body>
     <main id="main" class="light">
-      <header class="header">
-        <nav class="nav">
-          <a href="#about-section">HOBBIES</a>
-          <a href="#">PROJECTS</a>
-          <a href="#">EXPERIENCE</a>
-          <a href="#">EDUCATION</a>
-        </nav>
-
-        <nav class="nav-small-menu invi">
-          <a href="#">HOBBIES</a>
-          <a href="#">PROJECTS</a>
-          <a href="#">EXPERIENCE</a>
-          <a href="#">EDUCATION</a>
-        </nav>
-        <div class="menu">
-          <span class="material-symbols-outlined"> menu </span>
-        </div>
-      </header>
       <section class="hero">
         <div class="top-hero">
+          <header class="header">
+            <nav class="nav">
+              <a href="#about-section">HOBBIES</a>
+              <a href="#">PROJECTS</a>
+              <a href="#">EXPERIENCE</a>
+              <a href="#">EDUCATION</a>
+            </nav>
+
+            <nav class="nav-small-menu invi">
+              <a href="#">HOBBIES</a>
+              <a href="#">PROJECTS</a>
+              <a href="#">EXPERIENCE</a>
+              <a href="#">EDUCATION</a>
+            </nav>
+            <div class="menu">
+              <span class="material-symbols-outlined"> menu </span>
+            </div>
+          </header>
           <div class="contact">
             <div class="contact-left">
               <img src="./images/miguelPic.jpeg" alt="Miguel" title="Miguel" />
@@ -48,14 +48,6 @@
                 consectetur ad perspiciatis eius fugiat cum!
               </p>
               <div class="info">
-                <div class="contact-right-info">
-                  <span class="material-symbols-outlined"> home </span>
-                  <p>10 Angela St. Cornnubia, QLD, 4130</p>
-                </div>
-                <div class="contact-right-info">
-                  <span class="material-symbols-outlined"> call </span>
-                  <p>+61 416 795 837</p>
-                </div>
                 <div class="contact-right-info">
                   <span class="material-symbols-outlined"> mail </span>
                   <p>miguel.sor@icloud.com</p>
@@ -102,14 +94,18 @@
       <!--  Projects -->
       <section class="projects-main">
         <h2>Projects</h2>
-        <ul id="projects-list">
-          <!-- <li class="project-item">
-            <a href="./projects/todoList/index.html">
-              <img src="./images/todo.png" alt="todo app" />
-              <p>Simple To do App</p>
-            </a>
-          </li> -->
-        </ul>
+        <div class="projects-inner">
+          <button id="prevBtn">Prev</button>
+          <ul id="projects-list">
+            <!-- <li class="project-item">
+              <a href="./projects/todoList/index.html">
+                <img src="./images/todo.png" alt="todo app" />
+                <p>Simple To do App</p>
+              </a>
+            </li> -->
+          </ul>
+          <button id="nextBtn">Next</button>
+        </div>
       </section>
     </main>
     <script src="script.js"></script>

@@ -7,6 +7,9 @@ const searchResult = document.querySelector("#searchResult");
 const mainCtn = document.querySelector("#main");
 const darkBtn = document.querySelector("#dark-btn");
 const contactCard = document.querySelector(".contact");
+const projectsList = document.querySelector("#projects-list");
+const nextBtn = document.querySelector("#nextBtn");
+const prevBtn = document.querySelector("#prevBtn");
 
 function fetchAnime(pokemonName = "Pokemon") {
   //clear previous results
@@ -51,4 +54,76 @@ animeForm.addEventListener("submit", (event) => {
 
 menu.addEventListener("click", () => {
   smallMenu.classList.toggle("invi");
+});
+
+const projects = [
+  {
+    projectTitle: "project 1",
+    projectHref: "./projects/todoList/index.html",
+    projectImg: "./images/whiteLoading.gif",
+  },
+  {
+    projectTitle: "project 2",
+    projectHref: "./projects/todoList/index.html",
+    projectImg: "./images/whiteLoading.gif",
+  },
+  {
+    projectTitle: "project 3",
+    projectHref: "./projects/todoList/index.html",
+    projectImg: "./images/whiteLoading.gif",
+  },
+  {
+    projectTitle: "project 4",
+    projectHref: "./projects/todoList/index.html",
+    projectImg: "./images/whiteLoading.gif",
+  },
+];
+let index = 0;
+projectsList.insertAdjacentHTML(
+  "afterbegin",
+  `
+<li class="project-item">
+<a href=${projects[index].projectHref}>
+  <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
+  <p>${projects[index].projectTitle}</p>
+</a>
+</li>`
+);
+
+nextBtn.addEventListener("click", function () {
+  if (index <= projects.length && index !== projects.length) {
+    index++;
+    console.log("increment", index);
+    projectsList.innerHTML = "";
+    projectsList.insertAdjacentHTML(
+      "afterbegin",
+      `
+  <li class="project-item">
+    <a href=${projects[index].projectHref}>
+      <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
+      <p>${projects[index].projectTitle}</p>
+    </a>
+  </li>`
+    );
+  }
+});
+
+prevBtn.addEventListener("click", function () {
+  console.log("decrement", index);
+
+  if (index > 0) {
+    index--;
+    projectsList.innerHTML = "";
+
+    projectsList.insertAdjacentHTML(
+      "afterbegin",
+      `
+  <li class="project-item">
+    <a href=${projects[index].projectHref}>
+      <img src=${projects[index].projectImg} alt=${projects[index].projectTitle} />
+      <p>${projects[index].projectTitle}</p>
+    </a>
+  </li>`
+    );
+  }
 });
